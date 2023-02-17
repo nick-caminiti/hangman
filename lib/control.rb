@@ -60,6 +60,6 @@ class Control
     game_file = File.open(file_name_and_path, 'r')
     yaml = game_file.read
     puts file_name_and_path
-    @game = YAML.unsafe_load(yaml)
+    @game = YAML.safe_load(yaml, permitted_classes: [Game, HumanPlayer, WordGenerator])
   end
 end
