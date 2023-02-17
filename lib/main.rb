@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'control'
 require_relative 'game'
 require_relative 'human_player'

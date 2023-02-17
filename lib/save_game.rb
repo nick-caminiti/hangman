@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 module SaveGame
   def save_game_menu

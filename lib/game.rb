@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'yaml'
 require_relative 'human_player'
 require_relative 'word_generator'
