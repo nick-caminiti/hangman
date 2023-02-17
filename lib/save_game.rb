@@ -1,5 +1,4 @@
 
-
 module SaveGame
   def save_game_menu
     puts 'Enter a name for your saved game.'

@@ -1,4 +1,3 @@
-require 'open-uri'
 require 'yaml'
 require_relative 'human_player'
 require_relative 'word_generator'
