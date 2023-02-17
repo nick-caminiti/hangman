@@ -20,13 +20,14 @@ class Control
   end
 
   def game_menu
+    puts 'Welcome to Hangman!'
     puts 'Enter 1 to play a new game. Enter 2 to load a saved game.'
     @human_player.game_mode_input
   end
 
   def load_game
     create_saved_games_array
-    if @saved_games_array.length.postive?
+    if @saved_games_array.length.positive?
       print_load_menu
       game_number = @human_player.choose_save_game(@saved_games_array.length).to_i
       load_game_file("lib/saved_games/#{@saved_games_array[game_number]}.yaml")

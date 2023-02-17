@@ -121,19 +121,33 @@ class Game
 
   def print_man
     puts  ''
-    print_man
-    puts  ''
+    create_man_array
+    @man_array.each { |row| puts row }
   end
 
   def print_word_current_state
-    puts  ''
+    puts ''
     @word_array.each { |letter| print " #{letter}" }
-    puts  ''
-    puts  ''
+    puts ''
+    puts ''
   end
 
-  def print_man
-    man_array = [
+  def create_man_array
+    create_man_array_template
+    create_miss_dictionary
+    current_miss_dictionary = {}
+    @miss_dictionary.each do |key, value|
+      current_miss_dictionary[key] = if key.to_i <= @misses.to_i
+                                       value
+                                     else
+                                       ' '
+                                     end
+    end
+    @man_array = @man_array_template.map { |row| row.gsub(/[1-6}]/, current_miss_dictionary) }
+  end
+
+  def create_man_array_template
+    @man_array_template = [
       '  +-----+ ',
       '  |     | ',
       ' 314    | ',
@@ -141,8 +155,10 @@ class Game
       ' 5 6    | ',
       '       / \\'
     ]
+  end
 
-    miss_dictionary = {
+  def create_miss_dictionary
+    @miss_dictionary = {
       '1' => '0',
       '2' => '|',
       '3' => '\\',
@@ -150,15 +166,6 @@ class Game
       '5' => '/',
       '6' => '\\'
     }
-    current_miss_dictionary = {}
-    miss_dictionary.each do |key, value|
-      current_miss_dictionary[key] = if key.to_i <= @misses.to_i
-                                       value
-                                     else
-                                       ' '
-                                     end
-    end
-    man_array = man_array.map { |row| row.gsub(/[1-6}]/, current_miss_dictionary) }
-    man_array.each { |row| puts row }
   end
+
 end
