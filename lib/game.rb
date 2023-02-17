@@ -47,6 +47,7 @@ class Game
   end
 
   def play_round
+    puts ''
     puts "Round #{@round}"
     print_man
     print_word_current_state
