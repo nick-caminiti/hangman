@@ -22,7 +22,8 @@ class Control
 
   def game_menu
     puts 'Welcome to Hangman!'
-    puts 'Enter 1 to play a new game. Enter 2 to load a saved game.'
+    puts 'Enter 1 to play a new game.'
+    puts 'Enter 2 to load a saved game.'
     @human_player.game_mode_input
   end
 
