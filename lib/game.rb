@@ -1,9 +1,9 @@
 require 'open-uri'
 require 'yaml'
-require_relative 'human_player.rb'
-require_relative 'word_generator.rb'
-require_relative 'control.rb'
-require_relative 'save_game.rb'
+require_relative 'human_player'
+require_relative 'word_generator'
+require_relative 'control'
+require_relative 'save_game'
 
 class Game
   include SaveGame
