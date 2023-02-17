@@ -1,0 +1,46 @@
+--- !ruby/object:Game
+human_player: !ruby/object:HumanPlayer {}
+word_generator: !ruby/object:WordGenerator {}
+game_set: true
+save_character: "*"
+secret_word: acknowledged
+round: 3
+word_array:
+- a
+- _
+- _
+- _
+- _
+- _
+- _
+- e
+- _
+- _
+- e
+- _
+solved: false
+misses: 0
+guesses:
+- a
+- e
+man_array_template:
+- "  +-----+ "
+- "  |     | "
+- " 314    | "
+- "  2     | "
+- " 5 6    | "
+- "       / \\"
+miss_dictionary:
+  '1': '0'
+  '2': "|"
+  '3': "\\"
+  '4': "/"
+  '5': "/"
+  '6': "\\"
+man_array:
+- "  +-----+ "
+- "  |     | "
+- "        | "
+- "        | "
+- "        | "
+- "       / \\"
